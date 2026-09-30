@@ -1,0 +1,38 @@
+{
+    "name": "DevToolbox — Lightweight Developer Utilities",
+    "short_name": "DevToolbox",
+    "description": "Fast, lightweight and privacy-friendly developer, DevOps and productivity utilities. Everything runs in your browser.",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#e6e9ef",
+    "theme_color": "#e6e9ef",
+    "categories": ["developer", "utilities", "productivity"],
+    "icons": [
+        {
+            "src": "assets/icons/icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-maskable.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [
+        { "name": "JSON Formatter", "url": "./#/tool/json-formatter" },
+        { "name": "JWT Decoder", "url": "./#/tool/jwt-decoder" },
+        { "name": "CIDR Calculator", "url": "./#/tool/cidr-calculator" },
+        { "name": "UUID Generator", "url": "./#/tool/uuid-generator" }
+    ]
+}

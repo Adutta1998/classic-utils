@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+
+:root {
+    color-scheme: light;
+
+    /* Surfaces */
+    --bg: #e6e9ef;
+    --surface: #e6e9ef;
+    --surface-raised: #eceff5;
+    --surface-dark: #d9dde5;
+    --surface-code: #e1e5ec;
+
+    /* Text */
+    --text-primary: #20242b;
+    --text-secondary: #69707d;
+    --text-muted: #8b919c;
+
+    /* Accents */
+    --accent: #5b67f1;
+    --accent-hover: #4c57d8;
+    --accent-soft: rgba(91, 103, 241, .12);
+    --accent-contrast: #ffffff;
+
+    --success: #1e9163;
+    --warning: #b87a00;
+    --danger: #cc3d3d;
+    --success-soft: rgba(30, 145, 99, .12);
+    --warning-soft: rgba(184, 122, 0, .14);
+    --danger-soft: rgba(204, 61, 61, .12);
+
+    /* Shadow atoms */
+    --shadow-dark: rgba(163, 177, 198, .60);
+    --shadow-light: rgba(255, 255, 255, .85);
+
+    --shadow-raised:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    --shadow-raised-sm:
+        4px 4px 9px var(--shadow-dark),
+        -4px -4px 9px var(--shadow-light);
+    --shadow-raised-xs:
+        2px 2px 5px var(--shadow-dark),
+        -2px -2px 5px var(--shadow-light);
+    --shadow-inset:
+        inset 6px 6px 12px rgba(163, 177, 198, .45),
+        inset -6px -6px 12px rgba(255, 255, 255, .75);
+    --shadow-inset-sm:
+        inset 3px 3px 6px rgba(163, 177, 198, .40),
+        inset -3px -3px 6px rgba(255, 255, 255, .70);
+    --shadow-float:
+        0 18px 40px rgba(88, 100, 125, .22),
+        0 2px 6px rgba(88, 100, 125, .12);
+
+    /* Geometry */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+    --radius-pill: 999px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+
+    --header-h: 68px;
+    --sidebar-w: 268px;
+    --content-max: 1080px;
+
+    /* Motion */
+    --t-fast: 150ms ease;
+    --t-base: 200ms ease;
+    --t-slow: 260ms cubic-bezier(.22, .61, .36, 1);
+
+    /* Typography */
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", "Menlo", monospace;
+
+    --fs-xs: .75rem;
+    --fs-sm: .82rem;
+    --fs-base: .92rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.18rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #24272e;
+    --surface: #24272e;
+    --surface-raised: #2a2e36;
+    --surface-dark: #1f2228;
+    --surface-code: #1e2127;
+
+    --text-primary: #e7e9ee;
+    --text-secondary: #a7aebd;
+    --text-muted: #7d8493;
+
+    --accent: #7c86ff;
+    --accent-hover: #929bff;
+    --accent-soft: rgba(124, 134, 255, .18);
+    --accent-contrast: #12141a;
+
+    --success: #3ac08a;
+    --warning: #e0a63a;
+    --danger: #ef6b6b;
+    --success-soft: rgba(58, 192, 138, .16);
+    --warning-soft: rgba(224, 166, 58, .16);
+    --danger-soft: rgba(239, 107, 107, .16);
+
+    --shadow-dark: rgba(0, 0, 0, .55);
+    --shadow-light: rgba(255, 255, 255, .045);
+
+    --shadow-raised:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+    --shadow-raised-sm:
+        4px 4px 9px var(--shadow-dark),
+        -4px -4px 9px var(--shadow-light);
+    --shadow-raised-xs:
+        2px 2px 5px var(--shadow-dark),
+        -2px -2px 5px var(--shadow-light);
+    --shadow-inset:
+        inset 6px 6px 12px rgba(0, 0, 0, .55),
+        inset -6px -6px 12px rgba(255, 255, 255, .045);
+    --shadow-inset-sm:
+        inset 3px 3px 6px rgba(0, 0, 0, .5),
+        inset -3px -3px 6px rgba(255, 255, 255, .04);
+    --shadow-float:
+        0 18px 40px rgba(0, 0, 0, .55),
+        0 2px 6px rgba(0, 0, 0, .4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --t-fast: 1ms linear;
+        --t-base: 1ms linear;
+        --t-slow: 1ms linear;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+        scroll-behavior: auto !important;
+    }
+}

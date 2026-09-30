@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>DevToolbox — Lightweight Developer Utilities</title>
+    <meta name="description" content="Fast, lightweight and privacy-friendly developer, DevOps and productivity utilities. Everything runs in your browser.">
+    <meta name="theme-color" content="#e6e9ef">
+    <meta name="color-scheme" content="light dark">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DevToolbox — Lightweight Developer Utilities">
+    <meta property="og:description" content="Small tools. Less repetitive work. Everything runs locally in your browser.">
+
+    <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/icon-192.svg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#tool-area">Skip to content</a>
+
+    <div class="app" id="app">
+        <header class="app-header" role="banner">
+            <button class="icon-btn nav-toggle" id="nav-toggle" type="button"
+                    aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+                <span class="burger" aria-hidden="true"></span>
+            </button>
+
+            <a class="brand" href="#/" aria-label="DevToolbox home">
+                <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+                <span class="brand-text">
+                    <strong>DevToolbox</strong>
+                    <small>Small tools. Less repetitive work.</small>
+                </span>
+            </a>
+
+            <div class="header-search">
+                <div class="search-box" role="search">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" id="global-search" class="search-input"
+                           placeholder="Search tools…" autocomplete="off" spellcheck="false"
+                           aria-label="Search tools" aria-controls="search-results" aria-expanded="false">
+                    <kbd class="search-kbd" aria-hidden="true">Ctrl K</kbd>
+                </div>
+                <div class="search-results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="theme-toggle" type="button"
+                        aria-label="Change theme" title="Change theme">
+                    <span class="theme-glyph" id="theme-glyph" aria-hidden="true">◐</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="scrim" id="scrim" hidden></div>
+
+        <nav class="sidebar" id="sidebar" aria-label="Tool categories">
+            <div class="sidebar-inner" id="sidebar-inner"></div>
+            <p class="privacy-note">
+                <span aria-hidden="true">🔒</span>
+                Your data stays in your browser.
+            </p>
+        </nav>
+
+        <main class="tool-area" id="tool-area" tabindex="-1">
+            <div id="view-root" class="view-root"></div>
+        </main>
+    </div>
+
+    <div class="toast-stack" id="toast-stack" role="status" aria-live="polite" aria-atomic="false"></div>
+
+    <noscript>
+        <p style="padding:2rem;text-align:center">DevToolbox needs JavaScript enabled — all processing happens locally in your browser.</p>
+    </noscript>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
